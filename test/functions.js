@@ -122,14 +122,16 @@ Output:
 export function getGenderBreakdownOfEachCar(customers) {
     const carCount = customers.reduce((acc, customer) => {
         if(!acc[customer.car_make]) {
-            acc[customer.car_make] = customers.filter(allCustomer => customer.car_make === allCustomer.car_make).reduce((acc, customerCarmake) => {
-                if(acc[customerCarmake.gender]) {
-                    acc[customerCarmake.gender]++;
-                } else {
-                    acc[customerCarmake.gender] = 1;
-                }
-                return acc;
-            }, {});
+            acc[customer.car_make] = customers
+                .filter(allCustomer => customer.car_make === allCustomer.car_make)
+                .reduce((acc, customerCarmake) => {
+                    if(acc[customerCarmake.gender]) {
+                        acc[customerCarmake.gender]++;
+                    } else {
+                        acc[customerCarmake.gender] = 1;
+                    }
+                    return acc;
+                }, {});
         }
         return acc;
     }, {});
@@ -148,7 +150,7 @@ Output:
 
 export function getAllCoolFactorsOfEachCar(customers) {
     const carCoolCount = customers.reduce((acc, customer) => {
-        const coolPerCar = customers.reduce((acc, customer) => {
+        const coolPerCar = customers.filter(allCustomer => customer.car_make === allCustomer.car_make).reduce((acc, customer) => {
             if(customer.cool_factor) {
                 acc.push(customer.cool_factor);
             }
