@@ -121,14 +121,17 @@ Output:
 
 export function getGenderBreakdownOfEachCar(customers) {
     const carCount = customers.reduce((acc, customer) => {
-        const genderPerCar = customers.reduce((acc, customer) => {
-            if(acc[customer.gender]) {
-                (acc[customer.gender])++; 
-            } else {
-                (acc[customer.gender]) = 1;
-            } return acc;
-        }, {});
-        return { ...acc, [customer.car_make]: genderPerCar };
+        if(!acc[customer.car_make]) {
+            acc[customer.car_make] = customers.filter(allCustomer => customer.car_make === allCustomer.car_make).reduce((acc, customerCarmake) => {
+                if(acc[customerCarmake.gender]) {
+                    acc[customerCarmake.gender]++;
+                } else {
+                    acc[customerCarmake.gender] = 1;
+                }
+                return acc;
+            }, {});
+        }
+        return acc;
     }, {});
     return carCount;
 }

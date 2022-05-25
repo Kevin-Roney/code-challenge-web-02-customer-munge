@@ -137,193 +137,96 @@ test('getGenderBreakdownOfFordOwners', (expect) => {
 test('getGenderBreakdownOfEachCar', (expect) => {
     const expected = {
         'Alfa Romeo': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Audi': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'BMW': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Buick': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Male': 1
         },
         'Cadillac': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
+            'Male': 1,
             'Non-binary': 1
         },
         'Chevrolet': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Male': 3
         },
         'Chrysler': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Genderqueer': 1
         },
         'Dodge': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 2,
+            'Male': 1
         },
         'Eagle': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Ford': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Male': 2
         },
         'GMC': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 2,
+            'Male': 2
         },
         'Infiniti': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Jeep': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Kia': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Lexus': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Mazda': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Mercedes-Benz': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Mercury': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Mitsubishi': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Oldsmobile': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Male': 1
         },
         'Peugeot': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Pontiac': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Porsche': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Male': 1
         },
         'Scion': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Subaru': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1
         },
         'Toyota': {
             'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Male': 2
         },
         'Volvo': {
-            'Bigender': 1,
-            'Female': 19,
-            'Genderqueer': 1,
-            'Male': 23,
-            'Non-binary': 1
+            'Female': 1,
+            'Male': 1
         }
     };
 
